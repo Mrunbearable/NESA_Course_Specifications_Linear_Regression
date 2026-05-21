@@ -6,7 +6,7 @@ from sklearn.linear_model import LinearRegression
 import sqlite3 as sql
 
 
-con = sql.connect("../data/4.SQlite3.db")
+con = sql.connect("examples/data/4.SQlite3.db")
 cur = con.cursor()
 col_0 = "feature"
 col_1 = "target"
@@ -43,9 +43,10 @@ y_pred = my_model.predict(x)
 plt.plot(x, y_pred)
 plt.scatter(x, y, marker='x', c='r')
 plt.scatter(predict, y_prediction, marker='D', c='r', zorder=10, s=100)
-plt.text(y_prediction, predict, f"Target {y_prediction[0]} is prediction from {predict[0,0]} input")
 plt.title("NESA Course Specifications Data")
 plt.ylabel(f'Training {col_0}')
 plt.xlabel(f'Training {col_1}')
 plt.show()
 print(f"predicted feature is: {y_prediction}")
+# Displays a table with feature and target relationship
+# predicted features is [3.5]

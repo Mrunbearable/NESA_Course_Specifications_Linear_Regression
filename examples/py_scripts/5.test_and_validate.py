@@ -5,7 +5,7 @@ plt.style.use('ggplot')
 from sklearn.linear_model import LinearRegression
 
 
-training_data = pd.read_csv('../data/3.course_specifications_data.csv', delimiter=',')
+training_data = pd.read_csv('examples/data/3.course_specifications_data.csv', delimiter=',')
 x = np.array(training_data.iloc[:,1]).reshape(-1, 1)
 y = np.array(training_data.iloc[:,0])
 
@@ -14,7 +14,7 @@ my_model = LinearRegression()
 # Fit the model to the data
 my_model.fit(x, y)
 
-testing_data = pd.read_csv('../data/6.model_test_and_validate_data.csv', delimiter=',')
+testing_data = pd.read_csv('examples/data/6.model_test_and_validate_data.csv', delimiter=',')
 x_test = np.array(testing_data.iloc[:,1]).reshape(-1, 1)
 y_test = np.array(testing_data.iloc[:,0])
 
@@ -41,3 +41,8 @@ print(table)
 
 print(f'X Axis intercept: {my_model.intercept_}')
 print(f'Coefficient: {my_model.coef_}')
+# X Axis intercept: 2.277524340403194
+# Coefficient: [0.05854195]
+# Displays a graph with features, target, predicted result and cost\
+# Training data score: 0.8161026668356911
+# Testing data score: -1.1248970508896012

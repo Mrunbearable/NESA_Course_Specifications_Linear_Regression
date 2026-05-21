@@ -6,8 +6,8 @@ from sklearn.linear_model import LinearRegression
 import pickle
 import os
 #Create a folder for the output files
-if not os.path.exists("../output"):
-    os.makedirs("../output")
+if not os.path.exists("output"):
+    os.makedirs("output")
 
 
 def save_model ():

@@ -5,7 +5,7 @@ plt.style.use('ggplot')
 from sklearn.linear_model import LinearRegression
 
 
-training_data = pd.read_csv("../data/3.course_specifications_data.csv", delimiter=',')
+training_data = pd.read_csv("examples/data/3.course_specifications_data.csv", delimiter=',')
 x = np.array(training_data.iloc[:,1]).reshape(-1, 1)
 y = np.array(training_data.iloc[:,0])
 m = len(x)
@@ -38,9 +38,10 @@ y_pred = my_model.predict(x)
 plt.plot(x, y_pred)
 plt.scatter(x, y, marker='x', c='r')
 plt.scatter(predict, y_prediction, marker='D', c='r', zorder=10, s=100)
-plt.text(y_prediction, predict, f"Target {y_prediction[0]} is prediction from {predict[0,0]} input")
 plt.title("NESA Course Specifications Data")
 plt.ylabel(f'Training {training_data.columns[0]}')
 plt.xlabel(f'Training {training_data.columns[1]}')
 plt.show()
 print(f"predicted feature is: {y_prediction}")
+# Displays a table with feature and target relationship
+# Predicted feature is [3.5]
