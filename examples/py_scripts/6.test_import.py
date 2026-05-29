@@ -26,5 +26,7 @@ predict = np.array([4]).reshape(1, -1)
 result = loaded_model.predict(predict)
 print(result[0])
 # 2.9999999999999982
+# Number of training examples is: 8
+# Displays a table with feature and target
 
 

@@ -12,3 +12,6 @@ y_prediction = model.predict([[5.5]])
 print(f"predicted target is: {y_prediction}")
 y_prediction = model.predict([[4.5]])
 print(f"predicted target is: {y_prediction}")
+
+# Display predicted target for each line of code
+# The code makes a prediction based on user input and data

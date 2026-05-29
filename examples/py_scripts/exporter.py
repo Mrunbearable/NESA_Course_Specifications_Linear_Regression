@@ -11,14 +11,16 @@ if not os.path.exists("output"):
 
 
 def save_model ():
-    training_data = pd.read_csv('../data/3.course_specifications_data.csv', delimiter=',')
+    training_data = pd.read_csv('examples/data/3.course_specifications_data.csv', delimiter=',')
     x = np.array(training_data.iloc[:,1]).reshape(-1, 1)
     y = np.array(training_data.iloc[:,0])# Create the model
     my_model = LinearRegression()
     my_model.fit(x, y)
-    filename = '../output/my_saved_model.sav'
+    filename = 'examples/output/my_saved_model.sav'
     pickle.dump(my_model, open(filename, 'wb'))
     print(f"Model saved as {filename}")
 
 if __name__ == "__main__":
-    save_model()
+    save_model() 
+# just saved the model to directed area
+# output: Model saved as examples/output/my_saved_model.sav
